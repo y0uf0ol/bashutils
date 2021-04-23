@@ -9,6 +9,7 @@
 #script scaning 10% done
 #metsploit framework integration
 #searchsploit integration
+#testing
 
 echo "Enter your scan parameter, for help press h"
 read -p ""  ScanV
