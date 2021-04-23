@@ -6,7 +6,7 @@
 #automated ip range evaluation and scanning 
 #implementation of nessus and openvas
 #send report via mail
-#script scaning 10% done 
+#script scaning 10% done
 #metsploit framework integration
 #searchsploit integration
 
@@ -21,7 +21,7 @@ if [ "$ScanV" == "h" -o "$ScanV" == "H" ]
 	echo " this script also converts the XML into HTML"
 
 	else
-		echo "Typ in your IP or Network"
+		echo "Typ a IP or Network"
 		read -p "" IP
        	
 		if [ "$ScanV" == "f" -o "$ScanV" == "F" ];
