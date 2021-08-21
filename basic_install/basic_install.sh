@@ -5,7 +5,7 @@ read -p "" Email
 
 sudo apt update && sudo apt upgrade -y
 
-sudo apt install fail2ban unattended-upgrades apt-listchanges -y
+sudo apt install fail2ban unattended-upgrades apt-listchanges ufw -y
 
 sudo dpkg-reconfigure -plow unattended-upgrades --default-priority
 
@@ -13,8 +13,10 @@ sudo sed -i 's/Unattended-Upgrade::Mail "";/Unattended-Upgrade::Mail "$Email";/g
 
 sudo sed -i 's/email_address=root/email_address=$Email/g' /etc/apt/listchanges.conf
 
-echo "you can find the logs here /var/log/unattended-upgrades/unattended-upgrades.log"
-echo " or you can configure a SMTP Server to get mails"
+
+
+echo -e "\e[1;31myou can find the logs here /var/log/unattended-upgrades/unattended-upgrades.log\e[0m"
+echo -e "\e[1;31mor you can configure a SMTP Server to get mails\e[0m"
 
 
 sudo ufw allow ssh
