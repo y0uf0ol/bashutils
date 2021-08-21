@@ -5,7 +5,7 @@ sudo apt update && sudo apt upgrade -y
 
 sudo apt install fail2ban unattended-upgrades apt-listchanges -y
 
-sudo dpkg-reconfigure -plow unattended-upgrades -y
+sudo dpkg-reconfigure -plow unattended-upgrades --default-priority
  
 
  #sudo vi /etc/apt/apt.conf.d/50unattended-upgrades
@@ -22,4 +22,4 @@ sudo dpkg-reconfigure -plow unattended-upgrades -y
 
 sudo ufw allow ssh
 
-sudo ufw enable
+sudo ufw enable -y
