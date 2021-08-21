@@ -2,11 +2,10 @@
 
 sudo apt update && sudo apt upgrade -y
 
-sudo apt install fail2ban
 
-sudo apt install unattended-upgrades apt-listchanges bsd-mailx
+sudo apt install fail2ban unattended-upgrades apt-listchanges -y
 
-sudo dpkg-reconfigure -plow unattended-upgrades
+sudo dpkg-reconfigure -plow unattended-upgrades -y
  
 
  #sudo vi /etc/apt/apt.conf.d/50unattended-upgrades
@@ -19,8 +18,7 @@ sudo dpkg-reconfigure -plow unattended-upgrades
 
 
  #email_address=xyz@abc.com
-
-sudo unattended-upgrades --dry-run
+ 
 
 sudo ufw allow ssh
 
