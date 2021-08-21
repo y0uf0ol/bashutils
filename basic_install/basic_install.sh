@@ -22,4 +22,4 @@ sudo dpkg-reconfigure -plow unattended-upgrades --default-priority
 
 sudo ufw allow ssh
 
-sudo ufw enable -y
+sudo ufw enable
